@@ -1,0 +1,116 @@
+/* Leonida Guide — GTA 6 guide site. Dark, mobile-first, fast. */
+:root {
+  --bg: #0f0f1a;
+  --surface: #1a1b2e;
+  --surface-2: #23243d;
+  --text: #eceaf4;
+  --muted: #a5a3bd;
+  --accent: #ff2e88;
+  --accent-2: #8b5cf6;
+  --teal: #2dd4bf;
+  --border: #2e2f4a;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+header.site {
+  background: linear-gradient(135deg, #1a0b2e 0%, #2b0f3a 55%, #3d0f2e 100%);
+  border-bottom: 3px solid var(--accent);
+  padding: 1.1rem 1rem 0.9rem;
+}
+header.site .wrap { max-width: 860px; margin: 0 auto; }
+.logo { font-size: 1.6rem; font-weight: 800; letter-spacing: 0.5px; margin: 0; }
+.logo a { color: #fff; }
+.logo span { color: var(--accent); }
+.tagline { color: var(--muted); margin: 0.15rem 0 0.7rem; font-size: 0.95rem; }
+nav.main { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; font-size: 0.95rem; }
+nav.main a { color: #d9d4ff; padding: 0.15rem 0; }
+nav.main a:hover { color: #fff; }
+main { max-width: 860px; margin: 0 auto; padding: 1.4rem 1rem 2.5rem; }
+h1 { font-size: 1.75rem; line-height: 1.25; margin: 0.2rem 0 0.6rem; }
+h2 { font-size: 1.35rem; margin: 1.8rem 0 0.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+h3 { font-size: 1.12rem; margin: 1.3rem 0 0.35rem; }
+p { margin: 0.55rem 0; }
+ul, ol { margin: 0.5rem 0; padding-left: 1.4rem; }
+li { margin: 0.3rem 0; }
+.lede { font-size: 1.08rem; color: #d5d3e8; }
+.updated { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; }
+.note, .warning {
+  background: var(--surface);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+}
+.warning { border-left-color: var(--accent); }
+.note p, .warning p { margin: 0.3rem 0; }
+.note strong, .warning strong { color: #fff; }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+.table-wrap { overflow-x: auto; }
+th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { background: var(--surface-2); color: #fff; }
+tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+code, .code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--surface-2);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  padding: 0.05rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+.card-grid { display: grid; grid-template-columns: 1fr; gap: 0.8rem; margin: 1.2rem 0; }
+.card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  color: var(--text);
+}
+.card:hover { border-color: var(--accent); text-decoration: none; }
+.card h3 { margin: 0 0 0.25rem; color: #fff; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.checklist { list-style: none; padding-left: 0; }
+.checklist li { padding-left: 1.7rem; position: relative; }
+.checklist li::before { content: "☐"; position: absolute; left: 0; color: var(--teal); }
+.sources { font-size: 0.88rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 0.8rem; }
+.sources li { margin: 0.2rem 0; }
+.sources a { color: #8f8fd0; }
+.related { background: var(--surface); border-radius: var(--radius); padding: 0.9rem 1rem; margin-top: 1.8rem; }
+.related h3 { margin-top: 0; }
+footer.site {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 1.2rem 1rem 2rem;
+  text-align: center;
+}
+footer.site p { margin: 0.3rem 0; }
+@media (min-width: 640px) {
+  .card-grid { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 2.1rem; }
+}
+
+/* Ad placeholders — empty slots, no ad code yet. Paste network code inside the divs later. */
+.ad-slot { background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); min-height: 90px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 0.8rem; margin: 1.2rem auto; max-width: 860px; padding: 0 1rem; }
+.ad-slot::after { content: "Advertisement"; }
+.ad-in-article { max-width: 100%; }
